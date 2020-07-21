@@ -1,0 +1,3 @@
+-=-=-=-=-=-=-=-=-=-=-=-=
+[ERROR]
+(<class 'AttributeError'>, AttributeError("'TextChannel' object has no attribute 'sendd'"), <traceback object at 0x0000018BC69B4408>)

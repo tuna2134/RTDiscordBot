@@ -1,0 +1,397 @@
+    if reaction.emoji == "0️⃣":#ここから Help
+        global bname
+        print("log:help")
+        embed = discord.Embed(
+          title="コマンド一覧",
+          description="リアクションでページ変更ができます。\nわからないことがあったら[サポートサーバー](https://discord.gg/QYT7qpe)にきてね!",
+          color=0x87cefa)
+        embed.add_field(
+          name="rt!help",
+          value="今あなたが実行したコマンド。コマンドリストを表示します。",
+          inline=False)
+        embed.add_field(
+          name="rt!info",
+          value="このBOTの招待リンクなどを表示するコマンドです。",
+          inline=False)
+        embed.add_field(
+          name="rt!shelp",
+          value="サーバー関連の便利機能一覧",
+          inline=False)
+        embed.add_field(
+          name="rt!uhelp",
+          value="便利機能一覧",
+          inline=False)
+        embed.add_field(
+          name="rt!ping",
+          value="ms値を測定するコマンドです。",
+          inline=False)
+        embed.add_field(
+          name="rt!cr",
+          value="クレジットを表示します。",
+          inline=False)
+        embed.set_footer(text="0ページ目")
+        await reaction.message.edit(embed=embed)
+        await reaction.message.remove_reaction("0️⃣", user)
+        
+    if reaction.emoji.id == 726052719324037230:
+        print('1')
+        embed = discord.Embed(
+          title="コマンド一覧",
+          color=0x87cefa)
+        embed.add_field(
+          name="rt!delmes [値]",
+          value="[値]に入った数メッセージを削除します。\n[値]には2から50のみ入れられます。\n__管理者のみ実行可能__",
+          inline=False)
+        embed.add_field(
+          name="rt!here [文章]",
+          value="[文章]に入った数をWelcomﾒｯｾｰｼﾞとして登録します。\n$を入力すると改行が入ります。\n実行した場所にWelcomﾒｯｾｰｼﾞが送信されます。\n__管理者のみ実行可能__",
+          inline=False)
+        embed.add_field(
+          name="rt!heredel",
+          value="ウェルカムメッセージをオフにします。\n__管理者のみ実行可能__",
+          inline=False)
+        embed.add_field(
+          name="rt!baneve [True/False]",
+          value="全員メンション禁止機能のオン/オフ設定コマンド。\n最後のワードがTrueの場合この機能がオンになります。\nFalseはこの機能をオフにします。\nオンにするとeveryone, hereがつかえなくなります。\n__管理者のみ実行可能__",
+          inline=False)
+        embed.add_field(
+          name="rt!vset",
+          value="機能のON/OFFを確認できます。\n管理者であれば全員ﾒﾝｼｮﾝ禁止機能、翻訳機能のON/OFFをﾘｱｸｼｮﾝで変更できます。")
+        embed.set_footer(text="1ページ目")
+        await reaction.message.edit(embed=embed)
+        await reaction.message.remove_reaction("<:1_~1:726052719324037230", user)
+
+    if reaction.emoji.id == 726052719114190880:
+        embed = discord.Embed(
+          title="コマンド一覧",
+          color=0x87cefa)
+        embed.add_field(
+          name="__",
+          value="> **画像認証**\nサーバーに参加した人に画像認証をしてもらい、認証に成功したら指定した役職をつけます。\n__",
+          inline=False)
+        embed.add_field(
+          name="rt!cpic [False/役職の名前]",
+          value="画像認証を設定するコマンドです。\n[False/役職の名前]に入れた名前の役職を画像認証に成功した人につけます。\nFalseと入力すると画像認証をオフにします。\nこの機能を使う場合はサーバーに`認証-rt`というチャンネルを作ってください。\n`認証-rt`は認証コードを入力する場所として使います。\n__管理者のみ実行可能__",
+          inline=False)
+        embed.add_field(
+          name="__",
+          value="> **グローバルチャットを作る！**\nグローバルチャットが作れる機能。自分だけのグローバルチャットが作れる！\n公式のグローバルチャット名は`rt-g`だよ。\n__",
+          inline=False)
+        embed.add_field(
+          name="rt!makeg",
+          value="実行したチャンネルをグローバルチャットにします。\n__管理者のみ実行可能__",
+          inline=False)
+        embed.add_field(
+          name="rt!cng [名前]",
+          value="実行したチャンネルを[名前]のグローバルチャットにします。\n[名前]に入力したグローバルチャットに接続します。\n__管理者のみ実行可能__",
+          inline=False)
+        embed.set_footer(text="2ページ目")
+        await reaction.message.edit(embed=embed)
+        await reaction.message.remove_reaction("<:2_~1:726052719114190880", user)
+        
+    if reaction.emoji.id == 726052719441215518:
+        embed = discord.Embed(
+          title="コマンド一覧",
+          color=0x87cefa)
+        embed.add_field(
+          name="__",
+          value="> **いいね通知**\n:heart:のリアクションが付いた時に\nいいね通知がリアクションをつけたメッセージの送信者にきます。\n`いいねリスト-rt`というチャンネルを作るとそこにメッセージが載ります。\n__",
+          inline=False)
+        embed.add_field(
+          name="rt!gooddm [True/False]",
+          value="いいね通知機能のON/OFFコマンドです。\n最後をTrueにするとON、FalseにするとOFFになります。",
+          inline=False)
+        embed.add_field(
+          name="__",
+          value="> **URLコンパクト**\nURLがメッセージに含まれる場合リアクションが付きます。\nその時にそのリアクションを押すとURLを短くしてくれます。\n__",
+          inline=False)
+        embed.add_field(
+          name="__",
+          value="> **長文コンパクト**\n30行以上のメッセージが出た場合リアクションをつけ、それが押された場合長文をコンパクトにします。\nこの機能を使うには`長文置き場-rt`というチャンネルを作ってください。\n__",
+          inline=False)
+        embed.set_footer(text="3ページ目")
+        await reaction.message.edit(embed=embed)
+        await reaction.message.remove_reaction("<:3_~1:726052719441215518", user)
+
+    if reaction.emoji.id == 726052719504261253:
+        te = r'\/:*?"<>|'
+        embed = discord.Embed(
+          title="コマンド一覧",
+          color=0x87cefa)
+        embed.add_field(
+          name="__",
+          value="> **スタンプ機能**\n登録した画像を!doggokek!のようにメッセージで言ったら送信してくれる機能。\n__",
+          inline=False)
+        embed.add_field(
+          name="rt!staadd [名前]",
+          value=f'[名前]にいれた名前で添付された画像をスタンプとして登録します。\n例:`rt!stadd doggokek` この例の場合\n`!doggokek!`というワードがメッセージに含まれた時、添付した画像が送信されます。\n名前に`{te}`の文字は使えません。',
+          inline=False)
+        embed.add_field(
+          name="rt!stadel [名前]",
+          value="上のコマンドで登録した[名前]に入る名前のスタンプ削除します。",
+          inline=False)
+        embed.add_field(
+          name="rt!stalist [値]",
+          value="上のコマンドで登録したスタンプのリストを表示します。\n[値]に入った数のページを表示します。1ページ10個分\n例:`rt!stalist 2` この例の場合リストの2ページ目を表示します。",
+          inline=False)
+        embed.set_footer(text="4ページ目")
+        await reaction.message.edit(embed=embed)
+        await reaction.message.remove_reaction("<:4_~1:726052719504261253", user)
+
+    if reaction.emoji.id == 726052719340683264:
+        embed = discord.Embed(
+          title="コマンド一覧",
+          color=0x87cefa)
+        embed.add_field(
+          name="__",
+          value="> **NGワード機能**\n登録したワードをメッセージに含まれた場合削除する機能。\n__",
+          inline=False)
+        embed.add_field(
+          name="rt!ngadd [ワード]",
+          value="[ワード]に入る言葉をNGワードとして登録します。\n__管理者のみ実行可能__",
+          inline=False)
+        embed.add_field(
+          name="rt!ngdel [ワード]",
+          value="[ワード]のNGワードを削除します。\n__管理者のみ実行可能__")
+        embed.add_field(
+          name="rt!nglist [値]",
+          value="登録したNGワードのリストを表示します。\n[値]に入った数のページを表示します。1ページ10個分\n例:`rt!nglist 2` この例の場合リストの2ページ目を表示します。",
+          inline=False)
+        embed.set_footer(text="5ページ目")
+        await reaction.message.edit(embed=embed)
+        await reaction.message.remove_reaction("<:5_~1:726052719340683264", user)
+        
+    if reaction.emoji.id == 726052719328100432:
+        embed = discord.Embed(
+          title="コマンド一覧",
+          color=0x87cefa)
+        embed.add_field(
+          name="__",
+          value="> **自動翻訳機能**\nオンにするとメッセージに英単語が含まれる場合地球マークのリアクションがつきます。\nそのリアクションをクリックすると翻訳されます。\n__",
+          inline=False)
+        embed.add_field(
+          name="rt!tran [True/False]",
+          value="翻訳機能のON/OFFコマンドです。\n最後をTrueにするとON、FalseにするとOFFになります。\n__管理者のみ実行可能__",
+          inline=False)
+        embed.add_field(
+          name="__",
+          value="> **短縮URLにする**\nその名の通り\n__",
+          inline=False)
+        embed.add_field(
+          name="rt!urlsm [URL]",
+          value="[URL]にURLを入れて実行すると短縮されて戻ってきます。",
+          inline=False)
+        embed.set_footer(text="6ページ目")
+        await reaction.message.edit(embed=embed)
+        await reaction.message.remove_reaction("<:6_~1:726052719328100432", user)
+
+    if reaction.emoji.id == 726052719030304839:
+        embed = discord.Embed(
+          title="コマンド一覧",
+          color=0x87cefa)
+        embed.add_field(
+          name="rt!timem [日]",
+          value="実行した時間の[日]前のメッセージを表示します。\n表示したメッセージにジャンプできるURLも表示します。",
+          inline=False)
+        embed.add_field(
+          name="__",
+          value="> **YouTube再生**\nYouTubeの音楽を再生できます。\n__",
+          inline=False)
+        embed.add_field(
+          name="rt!play [URL]",
+          value="音声チャンネルに接続してから実行してください。\nURLに入ったYouTubeの動画を音声チャンネルで再生します。",
+          inline=False)
+        embed.add_field(
+          name="rt!stop [URL]",
+          value="音楽の再生をやめます。",
+          inline=False)
+        embed.add_field(
+          name="__",
+          value="> **ｵﾘｼﾞﾅﾙﾒﾆｭｰﾒｯｾｰｼﾞ機能**\nこのHelpコマンドのようなメニュー付きメッセージが作れる！\n__",
+          inline=False)
+        embed.add_field(
+          name="rt!menum [New/False]",
+          value="Newにして実行するとメニューﾒｯｾｰｼﾞ設定ファイルが作られます。\nﾒｯｾｰｼﾞの作り方は:one: :two: などのリアクションをﾒｯｾｰｼﾞにつけると、つけたﾘｱｸｼｮﾝのページに登録されます。(8ページまで)\nそしたらでてくる設定名を使って下のコマンドを実行することでﾒｯｾｰｼﾞがでます。",
+          inline=False)
+        embed.add_field(
+          name="rt!menuv [設定名]",
+          value="メニューメッセージを表示させます。\n上のmenumコマンドで設定した時にでた設定名をつかうことでできます。",
+          inline=False)
+        embed.add_field(
+          name="rt!menus [設定名]",
+          value="設定対象を変更します。[設定名]に入れた設定名を対象にします。",
+          inline=False)
+        embed.set_footer(text="7ページ目")
+        await reaction.message.edit(embed=embed)
+        await reaction.message.remove_reaction("<:7_~1:726052719030304839", user)
+        
+    if reaction.emoji == "❤️":
+        pat = f"RT/profile/good/{str(reaction.message.author.id)}.txt"
+        if (os.path.exists(pat)):
+            pass
+        else:
+            with open(pat, mode="w") as f:
+                f.write("True")
+        with open(pat) as f:
+            tr = f.read()
+        f.close()
+        link = f"https://discordapp.com/channels/{str(reaction.message.guild.id)}/{str(reaction.message.channel.id)}/{str(reaction.message.id)}"
+        if tr == "True":
+            dm = bot.get_user(reaction.message.author.id)
+            embed = discord.Embed(title="いいね通知",
+                description=f"あなたのメッセージにいいねが付きました。\n[メッセージに行く]({link})",
+                color=0x87cefa)
+            embed.set_author(name=reaction.message.author.display_name,
+                icon_url=reaction.message.author.avatar_url_as(format="png"))
+            try:
+                await dm.send(embed=embed)
+                await dm.send("この通知を消したい場合は`rt!gooddm [True/False]`と実行してください。\nTrueにすると通知がONになります。")
+            except:
+                print("pass")
+        try:
+            cha = discord.utils.get(reaction.message.guild.text_channels, name="いいねリスト-rt")
+        except AttributeError:
+            cha = "None"
+        if cha != "None":
+            embed = discord.Embed(title="いいねされたメッセージ",
+                description=f"{reaction.message.content}\n[メッセージに行く]({link})",
+                color=0x87cefa)
+            embed.set_author(name=reaction.message.author.display_name,
+                icon_url=reaction.message.author.avatar_url_as(format="png"))
+            await cha.send(embed=embed)
+    return
+
+@bot.event
+async def on_raw_reaction_add(payload):
+    channel = bot.get_channel(payload.channel_id)
+    message = await channel.fetch_message(payload.message_id)
+    user = bot.get_user(payload.user_id)
+    s = message.content
+    raw_id = s[0:4]
+    
+    if payload.member == bot.user:
+        return
+    
+    emoji = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣" ,"8️⃣"]
+    if payload.emoji.name in emoji:
+        if (os.path.exists(f"RT/server/rea2/{payload.user_id}.txt")):
+            with open(f"RT/server/rea2/{payload.user_id}.txt") as f:
+                id = f.read()
+            f.close()
+            if id != "False":
+                if payload.emoji.name == "1️⃣":
+                    with open(f"RT/server/rea/{id}/1.txt", mode="w") as f:
+                        f.write(f"{id}\n>>> `発言者:{message.author.display_name}`\n{s}")
+                    f.close()
+                    await message.add_reaction("<:good:717339022699003904")
+                    await message.remove_reaction("1️⃣", payload.member)
+                
+                if payload.emoji.name == "2️⃣":
+                    with open(f"RT/server/rea/{id}/2.txt", mode="w") as f:
+                        f.write(f"{id}\n>>> `発言者:{message.author.display_name}`\n{s}")
+                    f.close()
+                    await message.add_reaction("<:good:717339022699003904")
+                    await message.remove_reaction("2️⃣", payload.member)
+
+                if payload.emoji.name == "3️⃣":
+                    with open(f"RT/server/rea/{id}/3.txt", mode="w") as f:
+                        f.write(f"{id}\n>>> `発言者:{message.author.display_name}`\n{s}")
+                    f.close()
+                    await message.add_reaction("<:good:717339022699003904")
+                    await message.remove_reaction("3️⃣", payload.member)
+
+                if payload.emoji.name == "4️⃣":
+                    with open(f"RT/server/rea/{id}/4.txt", mode="w") as f:
+                        f.write(f"{id}\n>>> `発言者:{message.author.display_name}`\n{s}")
+                    f.close()
+                    await message.add_reaction("<:good:717339022699003904")
+                    await message.remove_reaction("4️⃣", payload.member)
+                
+                if payload.emoji.name == "5️⃣":
+                    with open(f"RT/server/rea/{id}/5.txt", mode="w") as f:
+                        f.write(f"{id}\n>>> `発言者:{message.author.display_name}`\n{s}")
+                    f.close()
+                    await message.add_reaction("<:good:717339022699003904")
+                    await message.remove_reaction("5️⃣", payload.member)
+
+                if payload.emoji.name == "6️⃣":
+                    with open(f"RT/server/rea/{id}/6.txt", mode="w") as f:
+                        f.write(f"{id}\n>>> `発言者:{message.author.display_name}`\n{s}")
+                    f.close()
+                    await message.add_reaction("<:good:717339022699003904")
+                    await message.remove_reaction("6️⃣", payload.member)
+
+                if payload.emoji.name == "7️⃣":
+                    with open(f"RT/server/rea/{id}/7.txt", mode="w") as f:
+                        f.write(f"{id}\n>>> `発言者:{message.author.display_name}`\n{s}")
+                    f.close()
+                    await message.add_reaction("<:good:717339022699003904")
+                    await message.remove_reaction("7️⃣", payload.member)
+
+                if payload.emoji.name == "8️⃣": 
+                    with open(f"RT/server/rea/{id}/8.txt", mode="w") as f:
+                        f.write(f"{id}\n>>> `発言者:{message.author.display_name}`\n{s}")
+                    f.close()
+                    await message.add_reaction("<:good:717339022699003904") 
+                    await message.remove_reaction("8️⃣", payload.member)
+                      
+    if payload.member == bot.user:
+        return
+    
+    if raw_id is None or raw_id == "":
+        return
+    
+    if payload.emoji.id == 726043030708158543:
+        with open(f"RT/server/rea/{raw_id}/1.txt") as f:
+            con = f.read()
+        await message.edit(content=con)
+        await message.remove_reaction("<:1_:726043030708158543", payload.member)
+
+    if payload.emoji.id == 726043030364356718:
+        with open(f"RT/server/rea/{raw_id}/2.txt") as f:
+            con = f.read()
+        await message.edit(content=con)
+        await message.remove_reaction("<:2_:726043030364356718", payload.member)
+        
+    if payload.emoji.id == 726043030473146408:
+        with open(f"RT/server/rea/{raw_id}/3.txt") as f:
+            con = f.read()
+        await message.edit(content=con)
+        await message.remove_reaction("<:3_:726043030473146408", payload.member)
+
+    if payload.emoji.id == 726043030590586970:
+        with open(f"RT/server/rea/{raw_id}/4.txt") as f:
+            con = f.read()
+        await message.edit(content=con)
+        await message.remove_reaction("<:4_:726043030590586970", payload.member)
+
+    if payload.emoji.id == 726043030343123036:
+        with open(f"RT/server/rea/{raw_id}/5.txt") as f:
+            con = f.read()
+        await message.edit(content=con)
+        await message.remove_reaction("<:5_:726043030343123036", payload.member)
+        
+    if payload.emoji.id == 726043030498574376:
+        with open(f"RT/server/rea/{raw_id}/6.txt") as f:
+            con = f.read()
+        await message.edit(content=con)
+        await message.remove_reaction("<:6_:726043030498574376", payload.member)
+
+    if payload.emoji.id == 726043030221750293:
+        with open(f"RT/server/rea/{raw_id}/7.txt") as f:
+            con = f.read()
+        await message.edit(content=con)
+        await message.remove_reaction("<:7_:726043030221750293", payload.member)
+        
+    if payload.emoji.id == 726043030515220580:
+        with open(f"RT/server/rea/{raw_id}/8.txt") as f:
+            con = f.read()
+        await message.edit(content=con)
+        await message.remove_reaction("<:8_:726043030515220580", payload.member)
+    try:
+        f.close()
+    except UnboundLocalError:
+        pass
+
+bot.run("NzE2NDk2NDA3MjEyNTg5MDg3.XuR_fg._XEZeUNburz4Q6sHvmbKJQmYsNE")
+#bot.run("NzE5NDM0MzQ4OTMxMTg2NzA5.Xu7ZrA.S08W6-BQ26YXzs40nLnSd63xK6M")#test
