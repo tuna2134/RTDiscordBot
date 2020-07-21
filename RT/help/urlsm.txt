@@ -1,0 +1,3 @@
+URLを短縮URLにできます。
+`rt!urlsm http://tasuren.syanari.com/`
+のようにすればできます。

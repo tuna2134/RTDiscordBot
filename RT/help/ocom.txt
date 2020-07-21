@@ -1,0 +1,11 @@
+ocom
+オリジナルコマンド
+
+`rt!ocom add ta!tasuren It's ME!`
+これをやると`ta!tasuren`と送った時に It's ME! と返ってきます。
+
+`rt!ocom dele ta!tasuren`
+これをやると`ta!tasuren`で登録されてるオリジナルコマンドが削除されます。
+
+`rt!ocom list 1`
+これはオリジナルコマンドリストの1ページ目を表示する機能です。

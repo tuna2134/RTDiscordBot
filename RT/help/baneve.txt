@@ -1,0 +1,6 @@
+全員ﾒﾝｼｮﾝ禁止機能を設定するためのコマンド
+ONにするとeveryoneやhereがでたら消すようになります。
+`rt!baneve True`とやるとON
+`rt!baneve False`とやるとOFF
+になります。
+__ｻｰﾊﾞｰの管理者のみ実行可能__

@@ -1,0 +1,5 @@
+BOT関連
+`help` BOTのヘルプコマンド
+`info` BOTの情報を表示
+`credit` 開発者を表示
+`ping` BOTネット速度測定

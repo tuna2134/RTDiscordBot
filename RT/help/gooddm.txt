@@ -1,0 +1,5 @@
+いいね通知設定コマンド
+:heart:のﾘｱｸｼｮﾝがつけられたらくる通知の設定ｺﾏﾝﾄﾞ
+`rt!gooddm True`にするとON
+`rt!gooddm False`にするとOFF
+になります。

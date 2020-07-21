@@ -1,0 +1,4 @@
+YouTube再生機能
+`rt!play YouTubeの動画のURL`
+↑とやると YouTubeの動画のURL の動画を再生します。
+↑オーディオチャンネルに接続してから実行してください。
